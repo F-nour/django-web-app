@@ -7,9 +7,16 @@
           name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Merchex</title>
-  <link rel="stylesheet" href="{% static 'bands/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'listings/style.css' %}" />
 </head>
 <body>
+  <nav>
+    <a href="{% url 'index' %}">Accueil</a>
+    <a href="{% url 'band-list' %}">Liste des groupes</a>
+    <a href="{% url 'listings-list' %}">Listings</a>
+  </nav>
   <main>
     {% block content %}{% endblock %}
   </main>
+</body>
+</html>

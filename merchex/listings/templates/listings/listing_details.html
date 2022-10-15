@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ listing.title }}</h2>
+
+<ul>
+  <li>Description : {{ listing.description }}</li>
+  <li>Année : {{ listing.year }}</li>
+  <li>Type : {{ listing.get_type_display }}</li>
+  {% if listing.official_homepage %}
+    <li><a href="{{ listing.official_homepage }}">{{ listing.official_homepage }}</a></li>
+  {% endif %}
+</ul>
+
+<a href="{% url 'listings-list' %}">Retour à toutes les listes</a>
+
+{% endblock %}
